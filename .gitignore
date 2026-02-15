@@ -1,0 +1,17 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.db
+.DS_Store
+
+# Notebooks
+ml/notebooks/
+.ipynb_checkpoints/
+
+# Test files
+test.mp4
+
+# Optional: raw training data
+ml/data/raw/
+ml/models/random_forest.pkl

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Squat Mode</title>
+    <style>
+        body {
+            background: #111;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        video {
+            border: 3px solid #00E5FF;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #00E5FF;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Live Squat Coach</h1>
+
+<video id="video" width="640" height="480" autoplay></video>
+<br>
+<button onclick="startCamera()">Start Camera</button>
+
+<script>
+
+async function startCamera() {
+    const video = document.getElementById('video');
+
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+            video: true
+        });
+
+        video.srcObject = stream;
+
+    } catch (err) {
+        alert("Camera access denied.");
+    }
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FormCheckAI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">FormCheck<span>AI</span></div>
+  <div class="nav-links">
+    <a class="active" href="index.html">Analysis</a>
+    <a href="dashboard.html">Dashboard</a>
+  </div>
+</nav>
+
+<div class="analysis-container">
+
+  <div class="hero">
+    <h1>Perfect Your Workout Form</h1>
+    <p>Upload a squat video to analyze your posture.</p>
+  </div>
+
+  <div class="analysis-card">
+    <input type="file" id="videoInput" accept="video/*">
+    <br>
+    <button class="primary-btn" onclick="analyzeVideo()">Analyze</button>
+
+    <div id="loading" class="hidden">Analyzing...</div>
+  </div>
+
+  <div id="results" class="results-card hidden">
+    <h3>Results</h3>
+
+    <div class="result-row">
+      <span>Reps</span>
+      <span id="repCount"></span>
+    </div>
+
+    <div class="result-row">
+      <span>Duration</span>
+      <span id="duration"></span>
+    </div>
+
+    <div class="result-row">
+      <span>Dominant Error</span>
+      <span id="dominantError"></span>
+    </div>
+
+    <div class="result-row">
+      <span>Recommendation</span>
+      <span id="recommendation"></span>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
